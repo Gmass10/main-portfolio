@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+
+}
+
+
+.hero2 {
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 150px 20px;
+  
+}
+
+.logo-hero {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  position: fixed;
+}
+
+.logo span {
+  font-weight: 400;
+  font-size: 12px;
+  color: #555;
+}
+
+.menu {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+h1 {
+  margin-top: -5rem;
+  font-size: 6rem;
+  line-height: 1.2;
+}
+
+.bold {
+  font-weight: 800;
+  font-size: 7.2rem;
+}
+.bold2 {
+  font-weight: 600;
+  font-size: 6rem;
+}
+.with {
+  
+  font-size: 5rem;
+}
+.outlined {
+  color: transparent;
+  -webkit-text-stroke: 2px #000;
+}
+
+/* Remove old text-decoration */
+.bold.underline {
+  display: inline-block; /* required for pseudo-element */
+  position: relative;
+
+}
+
+/* Add pseudo-element for animatable underline */
+.bold.underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  height: 8px; /* underline thickness */
+  width: 100%;
+  background: currentColor; /* underline color follows text */
+  transform: scaleX(0); /* start hidden */
+  transform-origin: left;
+  transition: transform 0.5s ease; /* animate in */
+}
+
+/* Activated state for GSAP/class toggle */
+.bold.underline.show-underline::after {
+  transform: scaleX(1);
+}
+
+
+.img-box {
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.img-box2 {
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+  margin-bottom: 20px;
+  border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 0;
+border-bottom-right-radius: 0;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.img-box2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.img-box3 {
+  display: inline-block;
+  width: 150px;
+  height: 80px;
+  margin-bottom: 20px;
+   border-radius: 50px / 50px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.img-box3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.img-red {
+  border: 2px dashed #000;
+  padding: 4px; /* space for border */
+}
+.img-gray {
+  border: 2px solid #000;
+  padding: 4px; /* space for border */
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.word {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.reveal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 2;
+  transform-origin: left;
+}
+
+/* Keep “THE NEXT GEN” hidden before reveal */
+.outlined {
+  position: relative;
+  display: inline-block;
+  opacity: 1;
+}
+
+.nextgen-wrap {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.nextgen-wrap .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  transform-origin: bottom;
+  transform: scaleY(1);
+  z-index: 2;
+}
+
+.nextgen {
+  position: relative;
+  z-index: 1;
+}
+.works{
+  margin-top: 8rem;
+  background-color:rgb(24, 22, 22);
+
+}
+.banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1;
+}
+.split span {
+  display: inline-block;
+  transform: translateY(125%);
+}
+.split{
+  font-family: 'Anton', sans-serif;
+  transform: skew(-8deg);
+  letter-spacing: 2px;
+}
+.img-mask {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(25% 25%, 75% 40%,100% 100%,0% 100%);
+  z-index: -1;
+}
+.in {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.section-title{
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 6rem;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  letter-spacing:1px;
+  margin-bottom: 4rem;
+}
+.bottom-left-buttons {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  z-index: 100;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  background: rgb(34, 32, 32);
+  transition: all 0.3s ease;
+}
+
+.btn img {
+  width: 18px;
+  height: 18px;
+  filter: invert(1);
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.btn:hover img {
+  filter: invert(0);
+}
+
+.btn.github {
+  border-color: #aaa;
+}
+
+#myStack {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a0a0a;
+  color: white;
+  padding: 0 8vw;
+  overflow: hidden;
+}
+
+.stack-left {
+  flex: 1;
+  z-index: 2;
+}
+
+
+.stack-title {
+   font-family: 'Bebas Neue', sans-serif;
+  font-size: 9vw;
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+/* ---- Grid ---- */
+.stack-grid {
+  flex: 1.5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* fixed 3 columns */
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* ---- Cards ---- */
+.card {
+  width: 120px;
+  height: 120px;
+  background: #111;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateZ(var(--tilt, -10deg)) translateY(40px);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+/* Alternating tilt directions */
+.card:nth-child(odd) {
+  --tilt: -8deg;
+}
+.card:nth-child(even) {
+  --tilt: 8deg;
+}
+
+/* When active */
+.card.active {
+  transform: rotateZ(var(--tilt, 0deg)) translateY(0px);
+  opacity: 1;
+}
+
+.bottom-left-buttons {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  
+  gap: 0.8rem;
+  z-index: 100;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: rgba(63, 58, 58, 0.637);
+  transition: all 0.3s ease;
+}
+
+.btn img {
+  width: 18px;
+  height: 18px;
+  filter: invert(1);
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.btn:hover img {
+  filter: invert(0);
+}
+
+.btn.github {
+  border-color: #aaa;
+}
+
+
+/* about */
+.about {
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 100px 10px;
+}
+.image-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+.visual-column,.text-column {
+  flex: 1;
+}
+.visual-column {
+  height: 480px;
+  
+  clip-path: polygon(13% 0, 100% 0, 100% 52%, 100% 30%,62% 100%, 0 100%, 0 72%,5% 62%,5% 13%);
+}
+.visual-column img {
+  width: 70%;
+  height: 100%;
+  border-radius: 10px;
+}
+.skill {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin: 0;
+  padding-bottom: 30px;
+}
+.text-column {
+ margin-top: 10px;
+}
+
+
+.hero {
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  overflow:hidden;
+  position: relative;
+}
+
+.slide-text {
+  font-size:1.2rem;
+  opacity:1;
+  position:relative;
+}
+
+#thanksText,#beHereText {
+  display: inline-block;
+}
+
+.image-wrapper {
+  
+  position:relative;
+  margin-right: 8rem;
+}
+
+.center-img {
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  transform: scale(0);
+  
+  position:absolute;
+  
+}
+
+.about-words {
+  opacity: 1;
+  transform: translateY(30px);
+  text-align: center;
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  line-height: 1.9;
+  color: #111;
+}
+
+.about-words span {
+  display:inline-block;
+  opacity:0;
+  margin:0 2px;
+}
+
+.last-image {
+  top:50%;
+  left:50%;
+  opacity:0;
+  transform: scale(0);
+  z-index: 5;
+}
+/* Size the last image neatly */
+.last-image img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  
+}
+.footer{
+  height:70vh;
+  
+  background:black;
+}
+.titl{
+  display:flex;
+  justify-content:center;
+  padding-top: 2rem;
+  padding-left: 3rem;
+  color:white;
+  letter-spacing: -3px;
+}
+.contact-container p {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+
+.contact-info {
+  margin-left: 40px;
+}
+
+.contact-item {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.contact-item i {
+  margin-right: 10px;
+  color: #00bfff;
+}
+
+.contact-item:hover {
+  color: #00bfff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a i {
+  margin-right: 8px;
+  color: #00bfff;
+}
+
+.social-links a:hover {
+  color: #00bfff;
+  transform: translateY(-3px);
+}
+
+.contact-right {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.quick-links {
+  font-size: 1rem;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-group .btn {
+  background: #e50914; /* Netflix-style red */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-group .btn:hover {
+  background: #ff3040;
+  transform: translateY(-3px);
+}
